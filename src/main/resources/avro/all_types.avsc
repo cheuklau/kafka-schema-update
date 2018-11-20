@@ -1,0 +1,36 @@
+{
+     "type": "record",
+     "namespace": "kafka_schema_test",
+     "name": "AllTypes01020",
+     "fields": [
+       { "name": "null_test",    "type": "null",    "default": null,  "doc": "test primitive type null" },
+       { "name": "boolean_test", "type": "boolean", "default": true,  "doc": "test primitive type boolean" },
+       { "name": "int_test",     "type": "int",     "default": 0,     "doc": "test primitive type integer" },
+       { "name": "long_test",    "type": "long",    "default": 0,     "doc": "test primitive type long" },
+       { "name": "float_test",   "type": "float",   "default": 0.0,   "doc": "test primitive type float" },
+       { "name": "string_test",  "type": "string",  "default": "foo", "doc": "test primitive type string" },
+       { "name": "enum_test",
+                "type": {
+                  "name": "enum_test",
+                  "type": "enum",
+                  "symbols": ["enum1", "enum2", "enum3"]
+                  },
+                "default": "enum1",
+                "doc": "test complex type enum"
+              },
+              { "name": "array_test",
+                "type": {
+                  "name": "array_test",
+                  "type": "array",
+                  "items": "string"
+                },
+                "default": ["default", "array", "of", "strings"],
+                "doc": "test complex type array"
+              },
+              { "name": "union_test",
+                "type": ["null", "string"],
+                "default": null,
+                "doc": "test complex type null"
+              }
+     ]
+}

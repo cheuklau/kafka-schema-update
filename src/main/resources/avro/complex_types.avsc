@@ -1,0 +1,30 @@
+{
+     "type": "record",
+     "namespace": "kafka_schema_test",
+     "name": "ComplexTypes",
+     "fields": [
+       { "name": "enum_test",
+         "type": {
+           "name": "enum_test",
+           "type": "enum",
+           "symbols": ["enum1", "enum2", "enum3"]
+           },
+         "default": "enum1",
+         "doc": "test complex type enum"
+       },
+       { "name": "array_test",
+         "type": {
+           "name": "array_test",
+           "type": "array",
+           "items": "string"
+         },
+         "default": ["default", "array", "of", "strings"],
+         "doc": "test complex type array"
+       },
+       { "name": "union_test",
+         "type": ["null", "string"],
+         "default": null,
+         "doc": "test complex type null"
+       }
+     ]
+}
