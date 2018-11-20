@@ -19,6 +19,7 @@ We want to verify backwards compatibility to ensure older clients can talk to ne
 - v0.11.0.3
 - v1.0.0
 - v1.0.1
+
 In addition to verifying backwards compatibility, we want to test if Confluent Schema Registry v5.0.1 without Zookeeper is compatible with Kafka v1.0.1. After the above criterion are met, we want to develop a migration strategy.
  
 ## Testing Strategy
